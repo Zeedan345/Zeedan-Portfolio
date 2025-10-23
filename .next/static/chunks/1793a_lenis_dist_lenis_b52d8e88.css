@@ -1,0 +1,22 @@
+/* [project]/node_modules/.pnpm/lenis@1.1.16_react@19.0.0-rc-66855b96-20241106/node_modules/lenis/dist/lenis.css [app-client] (css) */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=1793a_lenis_dist_lenis_b52d8e88.css.map*/
