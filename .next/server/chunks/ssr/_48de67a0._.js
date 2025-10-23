@@ -67,7 +67,7 @@ const AboutMe = ()=>{
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$0_$40$babel$2b$core$40$7$2e$26$2e$0_react$2d$dom$40$19$2e$0$2e$0$2d$rc$2d$66855b96$2d$20241106_react$40$19$2e$0$2e$0$2d$rc$2d$66_18876d0f6d3185b6119dce0b65d14ea1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                     className: "text-4xl md:text-6xl font-thin mb-20 slide-up-and-fade",
-                    children: "I believe in a user centered design approach, ensuring that every project I work on is tailored to meet the specific needs of its users."
+                    children: "I believe in building intelligent, efficient systems that combine technical depth with real-world impact, ensuring every solution serves a clear purpose for its users."
                 }, void 0, false, {
                     fileName: "[project]/app/_components/AboutMe.tsx",
                     lineNumber: 57,
@@ -106,7 +106,7 @@ const AboutMe = ()=>{
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$0_$40$babel$2b$core$40$7$2e$26$2e$0_react$2d$dom$40$19$2e$0$2e$0$2d$rc$2d$66855b96$2d$20241106_react$40$19$2e$0$2e$0$2d$rc$2d$66_18876d0f6d3185b6119dce0b65d14ea1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "slide-up-and-fade",
-                                        children: "I'm a frontend web developer dedicated to turning ideas into creative solutions. I specialize in creating seamless and intuitive user experiences."
+                                        children: "I'm a Software Engineer and researcher focused on developing intelligent systems that bridge data, learning, and real-world application."
                                     }, void 0, false, {
                                         fileName: "[project]/app/_components/AboutMe.tsx",
                                         lineNumber: 75,
@@ -114,10 +114,10 @@ const AboutMe = ()=>{
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$2$2e$0_$40$babel$2b$core$40$7$2e$26$2e$0_react$2d$dom$40$19$2e$0$2e$0$2d$rc$2d$66855b96$2d$20241106_react$40$19$2e$0$2e$0$2d$rc$2d$66_18876d0f6d3185b6119dce0b65d14ea1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "mt-3 slide-up-and-fade",
-                                        children: "My approach focuses on creating scalable, high-performing solutions tailored to both user needs and business objectives. By prioritizing performance, accessibility, and responsiveness, I strive to deliver experiences that not only engage users but also drive tangible results."
+                                        children: "My work spans machine learning, computer vision, and system design — from predictive models and neural architectures to cloud-based APIs. I take a research-driven approach to engineering, combining innovation with reliability to build technology that’s both smart and impactful."
                                     }, void 0, false, {
                                         fileName: "[project]/app/_components/AboutMe.tsx",
-                                        lineNumber: 81,
+                                        lineNumber: 80,
                                         columnNumber: 29
                                     }, this)
                                 ]

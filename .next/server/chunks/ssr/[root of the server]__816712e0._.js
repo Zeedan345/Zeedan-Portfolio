@@ -76,7 +76,7 @@ __turbopack_context__.s({
     "SOCIAL_LINKS": (()=>SOCIAL_LINKS)
 });
 const GENERAL_INFO = {
-    email: 'zfk4@msstate.edu',
+    email: 'zeedan345@gmail.com',
     emailSubject: "Let's collaborate on a project",
     emailBody: 'Hi Zeedan, I am reaching out to you because...',
     oldPortfolio: '',
@@ -181,11 +181,11 @@ const PROJECTS = [
       
       Key Features:<br/>
       <ul>
-        <li>🤖 Natural Language Processing: Translates conversational commands into executable shell operations</li>
-        <li>🔄 REPL Interface: Interactive read-eval-print loop for seamless command execution</li>
-        <li>⚡ Process Management: Advanced forking mechanisms for efficient process handling</li>
-        <li>🔒 Security First: Built-in validation checks for AI-generated commands</li>
-        <li>🌐 API Integration: Seamless HTTP/JSON communication with Gemini API</li>
+        <li> Natural Language Processing: Translates conversational commands into executable shell operations</li>
+        <li> REPL Interface: Interactive read-eval-print loop for seamless command execution</li>
+        <li> Process Management: Advanced forking mechanisms for efficient process handling</li>
+        <li> Security First: Built-in validation checks for AI-generated commands</li>
+        <li> API Integration: Seamless HTTP/JSON communication with Gemini API</li>
       </ul><br/>
       
       Technical Highlights:
@@ -200,11 +200,11 @@ const PROJECTS = [
       Solo Developer <br/>
       Conceptualized and built the entire system:
       <ul>
-        <li>⚙️ Systems Programming: Developed core shell functionality in C</li>
-        <li>🔌 API Integration: Implemented Gemini API communication layer</li>
-        <li>🛡️ Security: Built command validation and security checks</li>
-        <li>🎯 Process Control: Engineered forking and process management</li>
-        <li>📝 Documentation: Created comprehensive usage guides</li>
+        <li> Systems Programming: Developed core shell functionality in C</li>
+        <li> API Integration: Implemented Gemini API communication layer</li>
+        <li> Security: Built command validation and security checks</li>
+        <li> Process Control: Engineered forking and process management</li>
+        <li> Documentation: Created comprehensive usage guides</li>
       </ul>
       `,
         techStack: [
@@ -241,20 +241,20 @@ const PROJECTS = [
         
         Key Features:<br/>
         <ul>
-            <li>📅 Intelligent Scheduling: AI-powered algorithms reduced workflow bottlenecks by 40%</li>
-            <li>🔐 Enterprise Authentication: Robust RBAC system for secure access management</li>
-            <li>⚡ Real-time Sync: Optimized protocols achieving 25% faster load times</li>
-            <li>🏥 Multi-Agency Support: Scalable architecture serving government healthcare facilities</li>
-            <li>📊 Database Optimization: Advanced query optimization for high-performance data retrieval</li>
+            <li> Intelligent Scheduling: AI-powered algorithms reduced workflow bottlenecks by 40%</li>
+            <li> Enterprise Authentication: Robust RBAC system for secure access management</li>
+            <li> Real-time Sync: Optimized protocols achieving 25% faster load times</li>
+            <li> Multi-Agency Support: Scalable architecture serving government healthcare facilities</li>
+            <li> Database Optimization: Advanced query optimization for high-performance data retrieval</li>
         </ul>`,
         role: `Full-Stack Architect <br/>
         Led the complete platform development:
         <ul>
-            <li>🏗️ Architecture: Designed scalable full-stack infrastructure with Meteor and MongoDB</li>
-            <li>⚡ Performance: Optimized database queries and real-time sync protocols</li>
-            <li>🔒 Security: Implemented enterprise authentication and RBAC</li>
-            <li>🤖 Algorithms: Developed intelligent scheduling algorithms</li>
-            <li>📈 Impact: Reduced workflow bottlenecks by 40% and improved load times by 25%</li>
+            <li> Architecture: Designed scalable full-stack infrastructure with Meteor and MongoDB</li>
+            <li> Performance: Optimized database queries and real-time sync protocols</li>
+            <li> Security: Implemented enterprise authentication and RBAC</li>
+            <li> Algorithms: Developed intelligent scheduling algorithms</li>
+            <li> Impact: Reduced workflow bottlenecks by 40% and improved load times by 25%</li>
         </ul>`
     },
     {
@@ -268,9 +268,13 @@ const PROJECTS = [
             'ElevenLabs',
             'WebSockets'
         ],
-        thumbnail: '/projects/thumbnail/kinetrack.jpg',
-        longThumbnail: '/projects/long/kinetrack.jpg',
-        images: [],
+        thumbnail: '/projects/thumbnail/kinetrack.png',
+        longThumbnail: '/projects/long/kinetrack.png',
+        images: [
+            '/projects/images/kinetrack-1.png',
+            '/projects/images/kinetrack-2.png',
+            '/projects/images/kinetrack-3.png'
+        ],
         sourceCode: 'https://github.com/Zeedan345',
         liveUrl: '',
         year: 2024,
@@ -278,20 +282,20 @@ const PROJECTS = [
         
         Key Features:<br/>
         <ul>
-            <li>📸 Real-time Posture Analysis: MediaPipe-powered pose detection with live feedback</li>
-            <li>🤖 AI Coaching: Gemini Vision API integration for intelligent motion guidance</li>
-            <li>🔊 Voice Feedback: ElevenLabs text-to-speech for natural audio coaching</li>
-            <li>⚡ Live Communication: WebSocket implementation for instant feedback delivery</li>
-            <li>📱 Native iOS: Built with Swift for optimal performance and user experience</li>
+            <li> Real-time Posture Analysis: MediaPipe-powered pose detection with live feedback</li>
+            <li> AI Coaching: Gemini Vision API integration for intelligent motion guidance</li>
+            <li> Voice Feedback: ElevenLabs text-to-speech for natural audio coaching</li>
+            <li> Live Communication: WebSocket implementation for instant feedback delivery</li>
+            <li> Native iOS: Built with Swift for optimal performance and user experience</li>
         </ul>`,
         role: `Mobile & Backend Developer <br/>
         Developed end-to-end solution:
         <ul>
-            <li>📱 iOS Development: Built native app with Swift for seamless user experience</li>
-            <li>🔄 Backend: Developed FastAPI server for real-time processing</li>
-            <li>🧠 AI Integration: Implemented Gemini Vision API for motion analysis</li>
-            <li>🔊 Audio Pipeline: Integrated ElevenLabs for natural voice feedback</li>
-            <li>⚡ Real-time Systems: Built WebSocket infrastructure for live coaching</li>
+            <li> iOS Development: Built native app with Swift for seamless user experience</li>
+            <li> Backend: Developed FastAPI server for real-time processing</li>
+            <li> AI Integration: Implemented Gemini Vision API for motion analysis</li>
+            <li> Audio Pipeline: Integrated ElevenLabs for natural voice feedback</li>
+            <li> Real-time Systems: Built WebSocket infrastructure for live coaching</li>
         </ul>`
     }
 ];
