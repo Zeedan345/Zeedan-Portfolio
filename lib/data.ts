@@ -227,9 +227,17 @@ export const PROJECTS: IProject[] = [
 
 export const MY_EXPERIENCE = [
     {
+        title: 'Research Intern',
+        company: 'TU Dortmund, RISE DAAD Program',
+        duration: 'May 2026 - Present',
+        description: [
+            'Awarded the DAAD RISE scholarship (350 selected from 3,149 applicants) to research LLM-guided verification of neural networks at TU Dortmund.'
+        ],
+    },
+    {
         title: 'Software Engineering Intern',
         company: 'Taebi Lab, Mississippi State University',
-        duration: 'May 2025 - Present',
+        duration: 'May 2025 - Nov 2025',
         description: [
             'Developed cross-platform iOS app for neonatal cardiovascular monitoring with Swift, SwiftUI, and UIKit',
             'Built high-throughput real-time computer vision pipeline with GPU acceleration for critical healthcare application',
