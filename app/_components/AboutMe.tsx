@@ -1,96 +1,25 @@
-'use client';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
-import React from 'react';
+import SectionTitle from '@/components/SectionTitle';
+import PixelArt from '@/components/PixelArt';
+import { EDUCATION } from '@/lib/data';
 
-gsap.registerPlugin(ScrollTrigger, useGSAP);
-
-const AboutMe = () => {
-    const container = React.useRef<HTMLDivElement>(null);
-
-    useGSAP(
-        () => {
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    id: 'about-me-in',
-                    trigger: container.current,
-                    start: 'top 70%',
-                    end: 'bottom bottom',
-                    scrub: 0.5,
-                },
-            });
-
-            tl.from('.slide-up-and-fade', {
-                y: 150,
-                opacity: 0,
-                stagger: 0.05,
-            });
-        },
-        { scope: container },
-    );
-
-    useGSAP(
-        () => {
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    id: 'about-me-out',
-                    trigger: container.current,
-                    start: 'bottom 50%',
-                    end: 'bottom 10%',
-                    scrub: 0.5,
-                },
-            });
-
-            tl.to('.slide-up-and-fade', {
-                y: -150,
-                opacity: 0,
-                stagger: 0.02,
-            });
-        },
-        { scope: container },
-    );
-
+export default function AboutMe() {
     return (
-        <section className="pb-section" id="about-me">
-            <div className="container" ref={container}>
-                <h2 className="text-4xl md:text-6xl font-thin mb-20 slide-up-and-fade">
-                    I believe in building intelligent, efficient systems that 
-                    combine technical depth with real-world impact, ensuring 
-                    every solution serves a clear purpose for its users.
-                </h2>
-
-                <p className="pb-3 border-b text-muted-foreground slide-up-and-fade">
-                    This is me.
-                </p>
-
-                <div className="grid md:grid-cols-12 mt-9">
-                    <div className="md:col-span-5">
-                        <p className="text-5xl slide-up-and-fade">
-                            Hi, I&apos;m Zeedan.
-                        </p>
-                    </div>
-                    <div className="md:col-span-7">
-                        <div className="text-lg text-muted-foreground max-w-[450px]">
-                            <p className="slide-up-and-fade">
-                                I'm a Software Engineer and researcher focused on 
-                                developing intelligent systems that bridge data, 
-                                learning, and real-world application.
-                            </p>
-                            <p className="mt-3 slide-up-and-fade">
-                                 My work spans machine learning, computer vision, 
-                                 and system design — from predictive models and 
-                                 neural architectures to cloud-based APIs. I take a 
-                                 research-driven approach to engineering, combining 
-                                 innovation with reliability to build technology that’s 
-                                 both smart and impactful.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+        <section className="page-section page-width about-section" id="about-me" aria-labelledby="about-title">
+            <div className="about-copy">
+                <SectionTitle title="A little about me" id="about-title" />
+                <p>I’m a Computer Science student at Mississippi State University, interested in the space where machine learning, systems, and useful software meet.</p>
+                <p>My work has taken me from healthcare apps and research infrastructure in Mississippi to neural-network verification in Germany. I like understanding how things work and making them work better.</p>
+                <div className="about-signoff"><PixelArt kind="sparkle" /> Always something new to learn.</div>
             </div>
+            <aside className="education-card" aria-labelledby="education-title">
+                <p className="small-label" id="education-title">Currently studying</p>
+                <h3>{EDUCATION.school}</h3>
+                <p className="education-degree">{EDUCATION.degree}</p>
+                <p className="education-dates">{EDUCATION.dates}</p>
+                <p className="education-gpa"><strong>{EDUCATION.gpa}</strong> GPA</p>
+                <p className="small-label">Coursework</p>
+                <p className="coursework">{EDUCATION.coursework.join(' · ')}</p>
+            </aside>
         </section>
     );
-};
-
-export default AboutMe;
+}

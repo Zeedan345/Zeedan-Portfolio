@@ -1,96 +1,33 @@
-'use client';
-import ArrowAnimation from '@/components/ArrowAnimation';
-import Button from '@/components/Button';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import { GENERAL_INFO } from '@/lib/data';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
-import React from 'react';
+import PixelArt from '@/components/PixelArt';
 
-gsap.registerPlugin(ScrollTrigger, useGSAP);
-
-const Banner = () => {
-    const containerRef = React.useRef<HTMLDivElement>(null);
-
-    // move the content a little up on scroll
-    useGSAP(
-        () => {
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: containerRef.current,
-                    start: 'bottom 70%',
-                    end: 'bottom 10%',
-                    scrub: 1,
-                },
-            });
-
-            tl.fromTo(
-                '.slide-up-and-fade',
-                { y: 0 },
-                { y: -150, opacity: 0, stagger: 0.02 },
-            );
-        },
-        { scope: containerRef },
-    );
-
+export default function Banner() {
     return (
-        <section className="relative overflow-hidden" id="banner">
-            <ArrowAnimation />
-            <div
-                className="container h-[100svh] min-h-[530px] max-md:pb-10 flex justify-between items-center max-md:flex-col"
-                ref={containerRef}
-            >
-                <div className="max-md:grow max-md:flex flex-col justify-center items-start max-w-[544px]">
-                    <h1 className="banner-title slide-up-and-fade leading-[.95] text-6xl sm:text-[80px] font-anton">
-                        <span className="text-primary">SOFTWARE</span>
-                        <br /> <span className="ml-4">Engineering INTERN</span>
-                    </h1>
-                    <p className="banner-description slide-up-and-fade mt-6 text-lg text-muted-foreground">
-                        Hi! I&apos;m{' '}
-                        <span className="font-medium text-foreground">
-                            Zeedan Khan
-                        </span>
-                        . Currently pursuing my BSc in Computer Science and
-                        Engineering at <span className="font-medium">
-                            Mississippi State University
-                        </span>
-                        . I have hands-on experience in software development, 
-                        machine learning, and full-stack web applications, with 
-                        a focus on building scalable and impactful systems.
-                    </p>
-                    <Button
-                        as="link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={GENERAL_INFO.upworkProfile}
-                        variant="primary"
-                        className="mt-9 banner-button slide-up-and-fade"
-                    >
-                        Hire Me
-                    </Button>
-                </div>
-
-                <div className="md:absolute bottom-[10%] right-[4%] flex md:flex-col gap-4 md:gap-8 text-center md:text-right">
-                    <div className="slide-up-and-fade">
-                        <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
-                            1+
-                        </h5>
-                        <p className="text-muted-foreground">
-                            Years of Experience
-                        </p>
-                    </div>
-                    <div className="slide-up-and-fade">
-                        <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
-                            4+
-                        </h5>
-                        <p className="text-muted-foreground">
-                            Completed Projects
-                        </p>
-                    </div>
+        <section className="hero page-width" aria-labelledby="intro-title" id="banner">
+            <PixelArt kind="sparkle" className="hero-sparkle" />
+            <div className="hero-copy">
+                <h1 id="intro-title">Hi, I’m Zeedan<span>.</span></h1>
+                <p className="hero-role">Software engineer &amp; researcher</p>
+                <p className="hero-description">
+                    I build intelligent systems and useful software. Computer Science
+                    at Mississippi State. Recently a DAAD RISE research fellow in Germany.
+                </p>
+                <div className="hero-actions">
+                    <Link className="pixel-button" href="#selected-projects">View projects</Link>
+                    <a className="text-link" href={`mailto:${GENERAL_INFO.email}`}>
+                        Say hello <ArrowRight size={19} aria-hidden="true" />
+                    </a>
                 </div>
             </div>
+            <div className="hero-weather">
+                <PixelArt kind="sun" className="hero-sun" />
+                <PixelArt kind="cloud" className="hero-cloud cloud-one" />
+                <PixelArt kind="cloud" className="hero-cloud cloud-two" />
+            </div>
+            <PixelArt kind="cat" className="hero-cat" />
+            <PixelArt kind="flowers" className="hero-flowers" />
         </section>
     );
-};
-
-export default Banner;
+}

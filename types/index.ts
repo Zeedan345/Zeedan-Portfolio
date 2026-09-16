@@ -16,13 +16,13 @@ export type Variant =
     | 'no-color';
 
 export interface IProject {
+    name: string;
     title: string;
+    summary: string;
     year: number;
     description: string;
     role: string;
     techStack: string[];
-    thumbnail: string;
-    longThumbnail: string;
     images: string[];
     slug: string;
     liveUrl?: string;

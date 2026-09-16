@@ -1,85 +1,42 @@
 import type { Metadata } from 'next';
-import { Anton, Roboto_Flex } from 'next/font/google';
-import { ReactLenis } from 'lenis/react';
-
-import 'lenis/dist/lenis.css';
-import './globals.css';
-import Footer from '@/components/Footer';
-import ScrollProgressIndicator from '@/components/ScrollProgressIndicator';
-import ParticleBackground from '@/components/ParticleBackground';
-import Navbar from '@/components/Navbar';
-import CustomCursor from '@/components/CustomCursor';
-import Preloader from '../components/Preloader';
-import StickyEmail from './_components/StickyEmail';
+import { DM_Sans, Pixelify_Sans } from 'next/font/google';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import Script from 'next/script';
+import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
+import { GENERAL_INFO } from '@/lib/data';
+import './globals.css';
 
-const antonFont = Anton({
-    weight: '400',
-    style: 'normal',
-    subsets: ['latin'],
-    variable: '--font-anton',
-});
-
-const robotoFlex = Roboto_Flex({
-    weight: ['100', '400', '500', '600', '700', '800'],
-    style: 'normal',
-    subsets: ['latin'],
-    variable: '--font-roboto-flex',
-});
+const pixelFont = Pixelify_Sans({ subsets: ['latin'], variable: '--font-pixel', display: 'swap' });
+const bodyFont = DM_Sans({ subsets: ['latin'], variable: '--font-body', display: 'swap' });
+const description = 'Zeedan Khan is a software engineer and researcher studying Computer Science at Mississippi State University. Explore work in neural-network verification, machine learning, and iOS development.';
 
 export const metadata: Metadata = {
-    title: 'Portfolio - Zeedan Khan',
-    description: 'Personal portfolio of Zeedan Khan',
+    metadataBase: new URL(GENERAL_INFO.siteUrl),
+    title: { default: 'Zeedan Khan — Software Engineer & Researcher', template: '%s | Zeedan Khan' },
+    description,
+    openGraph: { title: 'Zeedan Khan — Software Engineer & Researcher', description, url: GENERAL_INFO.siteUrl, type: 'website' },
 };
 
-export default function RootLayout({
-    children,
-}: Readonly<{
-    children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en">
-            <GoogleAnalytics gaId="G-MHLY1LNGY5" />
-            <Script id="hotjar" strategy="afterInteractive">
-                {`(function(h,o,t,j,a,r){
-                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                h._hjSettings={hjid:6380611,hjsv:6};
-                a=o.getElementsByTagName('head')[0];
-                r=o.createElement('script');r.async=1;
-                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                a.appendChild(r);
-            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
-            </Script>
-            <body
-                className={`${antonFont.variable} ${robotoFlex.variable} antialiased`}
-            >
-                <ReactLenis
-                    root
-                    options={{
-                        lerp: 0.1,
-                        duration: 1.4,
-                    }}
-                >
-                    {/* <a
-                        href="https://forms.gle/t73XYJgWD5cJNr6e8"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-4 block bg-black text-center z-[1] text-sm py-2 hover:text-primary transition-all"
-                    >
-                        Frontend dev? I&apos;ll help you polish your resume —
-                        completely free.
-                    </a> */}
-                    <Navbar />
-                    <main>{children}</main>
-                    <Footer />
-
-                    <CustomCursor />
-                    <Preloader />
-                    <ScrollProgressIndicator />
-                    <ParticleBackground />
-                    <StickyEmail />
-                </ReactLenis>
+            <body id="top" className={`${pixelFont.variable} ${bodyFont.variable}`}>
+                <a className="skip-link" href="#main-content">Skip to content</a>
+                <Navbar />
+                <main id="main-content" tabIndex={-1}>{children}</main>
+                <Footer />
+                <GoogleAnalytics gaId="G-MHLY1LNGY5" />
+                <Script id="hotjar" strategy="afterInteractive">
+                    {`(function(h,o,t,j,a,r){
+                    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                    h._hjSettings={hjid:6380611,hjsv:6};
+                    a=o.getElementsByTagName('head')[0];
+                    r=o.createElement('script');r.async=1;
+                    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                    a.appendChild(r);
+                    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
+                </Script>
             </body>
         </html>
     );

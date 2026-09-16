@@ -61,11 +61,13 @@ export default {
                 sm: 'calc(var(--radius) - 4px)',
             },
             fontFamily: {
-                anton: ['var(--font-anton)'],
-                'roboto-flex': ['var(--font-roboto-flex)'],
+                pixel: ['var(--font-pixel)', 'monospace'],
+                sans: ['var(--font-body)', 'sans-serif'],
+                anton: ['var(--font-pixel)', 'monospace'],
+                'roboto-flex': ['var(--font-body)', 'sans-serif'],
             },
             padding: {
-                section: '250px',
+                section: '88px',
             },
             container: {
                 center: true,
